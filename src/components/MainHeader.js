@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Products from '../pages/Products';
 import Welcome from '../pages/Welcome';
 import classes from './MainHeader.module.css';
@@ -9,14 +9,16 @@ const MainHeader = () => {
       <nav>
         <ul>
           <li>
-            <Link to='./welcome'>
+            <NavLink activeClassName={classes.active} to='./welcome'>
               Welcome
               {/* <Welcome /> */}
-            </Link>
+            </NavLink>
           </li>
 
           <li>
-            <Link to='./products'>{/* <Products /> */} Products</Link>
+            <NavLink activeClassName={classes.active} to='./products'>
+              {/* <Products /> */} Products
+            </NavLink>
           </li>
         </ul>
       </nav>
